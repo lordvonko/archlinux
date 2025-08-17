@@ -102,3 +102,36 @@ cp -r kitty/themes ~/.config/kitty/
 - Wayland-native with transparency support
 - Session management for development workflows
 - Extended Unicode support for mathematical symbols
+
+## Shell Configuration (Zsh + Starship)
+
+### Files
+- `starship.toml` - Starship prompt configuration
+- `zsh/.zshrc` - Zsh shell configuration
+
+### Description
+Minimal Zsh configuration with Starship prompt integration featuring Git status, language detection, and development-optimised features.
+
+### Installation
+```bash
+# Copy shell configurations
+cp starship.toml ~/.config/starship.toml
+cp zsh/.zshrc ~/.zshrc
+
+# Set Zsh as default shell
+chsh -s /bin/zsh
+```
+
+### Dependencies
+- zsh
+- starship
+- zsh-autosuggestions
+- zsh-completions
+- zsh-syntax-highlighting (optional)
+
+### Configuration Notes
+- Lambda (λ) prompt symbol with colour-coded status
+- Git branch and status integration
+- Language detection for Python, Node.js, Rust, Go, Java, C
+- Command duration display for performance monitoring
+- Auto-suggestions based on command history

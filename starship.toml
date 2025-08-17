@@ -1,0 +1,112 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$java\
+$c\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = true
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = "🔒"
+read_only_style = "red"
+
+[git_branch]
+style = "bold green"
+format = "[$symbol$branch]($style) "
+symbol = " "
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold yellow"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?"
+stashed = "\\$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[python]
+style = "bold yellow"
+format = '[$symbol$version]($style) '
+symbol = " "
+
+[nodejs]
+style = "bold green"
+format = "[$symbol]($style) "
+symbol = ""
+detect_files = ["package.json", ".nvmrc"]
+detect_folders = ["node_modules"]
+
+[rust]
+style = "bold red"
+format = "[$symbol$version]($style) "
+symbol = " "
+
+[golang]
+style = "bold cyan"
+format = "[$symbol$version]($style) "
+symbol = " "
+
+[java]
+style = "bold red"
+format = "[$symbol$version]($style) "
+symbol = " "
+
+[c]
+style = "bold blue"
+format = "[$symbol$version]($style) "
+symbol = " "
+
+[cmd_duration]
+min_time = 2_000
+style = "bold yellow"
+format = "[took $duration]($style) "
+
+[character]
+success_symbol = "[λ](bold green)"
+error_symbol = "[λ](bold red)"
+vicmd_symbol = "[λ](bold yellow)"
+
+[line_break]
+disabled = false
+
+# Disabled modules for minimal prompt
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[kubernetes]
+disabled = true
+[docker_context]
+disabled = true
+[package]
+disabled = true
+[memory_usage]
+disabled = true
+[time]
+disabled = true
+[battery]
+disabled = true
+[username]
+disabled = true
+[hostname]
+disabled = true
+[os]
+disabled = true
