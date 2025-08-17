@@ -1,0 +1,103 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-weight: 400;
+  font-size: 11px;
+  colour: #c0c0c0;
+}
+
+#waybar {
+  background-colour: #1a1a1a;
+  border-bottom: 1px solid #333333;
+  transition: none;
+}
+
+#workspaces {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+#workspaces button {
+  background: transparent;
+  colour: #666666;
+  border: none;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 0;
+  transition: none;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+#workspaces button.active {
+  colour: #c0c0c0;
+  background: #333333;
+}
+
+#workspaces button.occupied {
+  colour: #999999;
+}
+
+#workspaces button:hover {
+  background: #2a2a2a;
+  colour: #c0c0c0;
+}
+
+#clock {
+  background: transparent;
+  colour: #c0c0c0;
+  font-weight: 500;
+  padding: 4px 16px;
+  border: none;
+}
+
+#cpu, #memory, #custom-gpu-usage, #pulseaudio, #network {
+  background: transparent;
+  colour: #999999;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border: none;
+  font-weight: normal;
+}
+
+#cpu:hover, #memory:hover, #custom-gpu-usage:hover, 
+#pulseaudio:hover, #network:hover {
+  background: #2a2a2a;
+  colour: #c0c0c0;
+}
+
+#tray {
+  background: transparent;
+  padding: 4px;
+}
+
+#tray > * {
+  -webkit-filter: grayscale(1) brightness(0.8);
+}
+
+#tray > .passive {
+  -webkit-filter: grayscale(1) brightness(0.5);
+  opacity: 0.7;
+}
+
+#tray > .needs-attention {
+  -webkit-filter: grayscale(1) brightness(1);
+  background-colour: #333333;
+}
+
+#tray menu {
+  background-colour: #1a1a1a;
+  border: 1px solid #333333;
+  colour: #c0c0c0;
+}
+
+#tray menuitem {
+  background-colour: #1a1a1a;
+  colour: #c0c0c0;
+  border: none;
+}
+
+#tray menuitem:hover {
+  background-colour: #333333;
+}
