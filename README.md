@@ -72,3 +72,33 @@ cp waybar/style.css ~/.config/waybar/
 - GPU monitoring configured for NVIDIA (customisable for AMD)
 - 24-hour time format
 - Minimal tooltip usage for clean interface
+
+## Kitty Terminal Configuration
+
+### Files
+- `kitty.conf` - Main terminal configuration
+- `sessions/development.conf` - Development session layout
+- `themes/stem_dark.conf` - STEM-optimised colour scheme
+
+### Description
+High-performance terminal emulator configuration optimised for development work with GPU acceleration, programming ligatures, and STEM-friendly colour schemes.
+
+### Installation
+```bash
+# Copy to Kitty config directory
+cp kitty/kitty.conf ~/.config/kitty/
+cp -r kitty/sessions ~/.config/kitty/
+cp -r kitty/themes ~/.config/kitty/
+```
+
+### Dependencies
+- kitty
+- ttf-jetbrains-mono-nerd (font)
+- python-pygments (syntax highlighting, optional)
+
+### Configuration Notes
+- GPU-accelerated rendering with VSync optimisation
+- Programming ligatures and enhanced font features
+- Wayland-native with transparency support
+- Session management for development workflows
+- Extended Unicode support for mathematical symbols
